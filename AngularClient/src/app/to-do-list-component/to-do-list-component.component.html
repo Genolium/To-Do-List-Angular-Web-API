@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-between container py-4">
+    <h1 class="text-primary">Список задач:</h1>
+    <div>
+        <button class="btn btn-lg btn-primary" (click)="createItem()">Создать задачу <i class="bi bi-journal-plus"></i></button>
+    </div>
+</div>
+<div class="py-2 px-5">
+    <div *ngIf="toDoItems.length==0" class="text-light"><h2>Похоже, вы ещё не создали ни одну задачу</h2></div>
+    <div *ngIf="editItem.id != null" class="text-light mb-5">
+        <form class="pb-4 form-switch" (ngSubmit)="updateData()">
+            <div class="d-flex justify-content-start align-items-center">
+                <h4 class="mr-3">Редактирование: {{editItem.title}}</h4>             
+                <button type="button" class="btn btn-dark mx-3" (click)="deselectItem()">Отменить изменение <i class="bi bi-pen"></i></button>
+            </div>
+            <label class="form-label">Название</label>
+            <input type="text" class="form-control" name="title" [(ngModel)]="editItem.title" required>
+            <label class="form-label mt-2">Описание</label>
+            <textarea  type="text" class="form-control" name="description" [(ngModel)]="editItem.description"></textarea>
+            <div class="d-flex justify-content-start align-items-center mt-2">
+                <label class="form-label my-0">Завершена ли?</label>
+                <input type="checkbox" class="form-check-input mx-2 my-0" name="isComplete" [(ngModel)]="editItem.isComplete">
+            </div>
+            <label class="form-label">Дедлайн</label>
+            <input type="date" class="form-control" name="date" [(ngModel)]="editDate">
+            <button class="btn btn-info mt-2" type="submit" (click)="changeItem(editItem,$event)">Сохранить <i class="bi bi-pen"></i></button>
+        </form>
+    </div>
+    <div *ngFor="let item of toDoItems" class="bg-dark text-light p-3 my-3 rounded-2">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-start align-items-center"><div>
+                <h1>{{item.title}}</h1></div>
+                <h3 class="my-0 me-3" *ngIf="item.isComplete; else elseBlock"><i class="bi bi-check"></i></h3>
+                <ng-template #elseBlock><h3 class="my-0 me-3"><i class="bi bi-x"></i></h3></ng-template>
+            </div>
+            <div>
+                <button class="btn btn-info" (click)="selectItem(item)">Изменить <i class="bi bi-pen"></i></button>
+            </div>
+        </div>
+        <div *ngIf="item.description"><p>{{item.description}}</p></div>
+        <div *ngIf="item.dueDate"><p>Дедлайн: {{apiService.dateToStr(item.dueDate)}}</p></div>
+        <button class="btn btn-danger" (click)="deleteItem(item)">Удалить <i class="bi bi-x-lg"></i></button>
+    </div>
+</div>

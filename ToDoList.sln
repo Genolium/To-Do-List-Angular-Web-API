@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListAPI", "ListAPI\ListAPI.csproj", "{522195F1-A081-4B00-A518-2350D3122307}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E33D8B6C-4DB4-41FE-B7C2-CF8AB48A83E3} = {E33D8B6C-4DB4-41FE-B7C2-CF8AB48A83E3}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{E33D8B6C-4DB4-41FE-B7C2-CF8AB48A83E3}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "AngularClient", "AngularClient\AngularClient.esproj", "{CC3C6546-212C-43EC-8AFA-7F4E4B99E41B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{522195F1-A081-4B00-A518-2350D3122307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522195F1-A081-4B00-A518-2350D3122307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522195F1-A081-4B00-A518-2350D3122307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522195F1-A081-4B00-A518-2350D3122307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E33D8B6C-4DB4-41FE-B7C2-CF8AB48A83E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E33D8B6C-4DB4-41FE-B7C2-CF8AB48A83E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E33D8B6C-4DB4-41FE-B7C2-CF8AB48A83E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E33D8B6C-4DB4-41FE-B7C2-CF8AB48A83E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC3C6546-212C-43EC-8AFA-7F4E4B99E41B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC3C6546-212C-43EC-8AFA-7F4E4B99E41B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC3C6546-212C-43EC-8AFA-7F4E4B99E41B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CC3C6546-212C-43EC-8AFA-7F4E4B99E41B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC3C6546-212C-43EC-8AFA-7F4E4B99E41B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC3C6546-212C-43EC-8AFA-7F4E4B99E41B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A0D2897-8FF2-4123-86C7-3BE868AD87FE}
+	EndGlobalSection
+EndGlobal

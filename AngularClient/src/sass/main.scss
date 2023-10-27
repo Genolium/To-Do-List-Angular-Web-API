@@ -1,0 +1,12 @@
+$primary: #fffffe;
+$secondary: #004643;
+$light: #fffffe;
+$danger: #e16162;
+$dark: #001e1d;
+$info: #f9bc60;
+
+$form-switch-color:               rgba($dark, .25);
+$form-switch-focus-color:         $danger;
+$form-switch-checked-color:       $danger;
+
+@import "../../node_modules/bootstrap/scss/bootstrap"
