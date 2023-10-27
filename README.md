@@ -4,5 +4,5 @@
 <p>Back-End: ASP.NET Web API</p>
 
 <h1>Запуск</h1>
-<p>Запустить ListAPI\bin\Debug\net7.0\ListAPI.exe</p>
+<p>Запустить проект ListApi в Visual Studio</p>
 <p>Открыть cmd в папке AngularClient и выполнить команду ng serve --open</p>
